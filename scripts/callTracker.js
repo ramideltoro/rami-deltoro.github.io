@@ -52,7 +52,7 @@ function updateRadialContainer(numberOfCallsTakenParameter) {
     jQuery("#radial-container").radialProgress("init", {
         'size': 200,
         'fill': 10
-    }).radialProgress("to", {'perc': percentage, 'time': 2000});
+    }).radialProgress("to", {'perc': percentage, 'time': 500});
 }
 
 function addRowToCallTable() {
