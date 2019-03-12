@@ -26,6 +26,8 @@
         <!-- **** MAIN APP *** -->
         <script src="scripts/callTracker.js"></script>
 
+
+
         <!-- *** THERE ARE MORE SCRIPTS AFTER BODY. THOSE NEED TO LOAD AFTER PAGE LOADS! ***-->
     </head>
 
@@ -34,8 +36,21 @@
         <div class="jumbotron">
             <h1 class="display-3">Call Tracker</h1>
             <p class="lead">This software will help you track your calls</p>
-            <hr class="my-4">
-            <p>It can provide you vital information you need throughout the day</p>
+
+            <div class="row" style="">
+
+                <div class="col-xs-12 col-md-6" style="height:150px;">
+                    <hr class="my-4">
+                    <p>It can provide you vital information you need throughout the day</p>
+                </div>
+
+                <div class="col-xs-12 col-md-6" style="height:150px;" >
+                    <hr class="my-4">
+                    <p>Your progress percentage towards 50 calls today.</p>
+                    <div id="radial-container" align="center"></div>
+                </div>
+            </div>
+
 
             <!-- **** Button to kick off process -->
             <p class="lead">
@@ -45,7 +60,6 @@
             <br>
             <br>
 
-                <div id="radial-container"></div>
 
             <br>
             <br>
