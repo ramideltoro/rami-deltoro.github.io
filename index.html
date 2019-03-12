@@ -8,35 +8,25 @@
 
         <title>Call Tracker</title>
 
-        <!--
-        ****  START LINKS
-        -->
+        <!-- **** BOOTSTRAP & FULL JQUERY *** -->
+        <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <!-- IMPORTANT : To change the following minty-bootstrap.css from https://bootswatch.com/4/**[SELECT THEME]**/bootstrap.css-->
-        <link rel="stylesheet" href="bootswatch/minty-bootstrap.css" media="screen">
-        <link rel="stylesheet" href="bootswatch/custom.min.css">
-
-        <!--
-        ****  END LINKS
-        -->
-
-        <!--
-        ****  START JS SCRIPTS
-        -->
-        <script src="jquery/jquery-3.3.1.min.js"></script>
-        <script src="poppers/popper.min.js"></script>
-
-        <!--
-            The following is a script for the radial progress bar.
-            https://www.jqueryscript.net/loading/Customizable-Radial-Progress-Bar-Plugin-With-jQuery.html
-        -->
+        <!--The following is a script for the radial progress bar.
+            https://www.jqueryscript.net/loading/Customizable-Radial-Progress-Bar-Plugin-With-jQuery.html-->
         <script src="scripts/radialProgressBar.js"></script>
-        <script src="scripts/callTracker.js"></script>
-        <!--
-        ****  END JS SCRIPTS
-        -->
 
+        <!-- IMPORTANT : To change the following minty-bootstrap.css from https://bootswatch.com/4/**[SELECT THEME]**/bootstrap.css-->
+        <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+
+
+
+        <!-- **** MAIN APP *** -->
+        <script src="scripts/callTracker.js"></script>
+
+        <!-- *** THERE ARE MORE SCRIPTS AFTER BODY. THOSE NEED TO LOAD AFTER PAGE LOADS! ***-->
     </head>
 
     <body style="" class="">
@@ -47,9 +37,7 @@
             <hr class="my-4">
             <p>It can provide you vital information you need throughout the day</p>
 
-            <!--
-            **** Button to kick off process
-            -->
+            <!-- **** Button to kick off process -->
             <p class="lead">
                 <a class="btn btn-primary btn-lg" href="#" role="button" id="trackCallButton">Track call</a>
             </p>
@@ -57,26 +45,42 @@
             <br>
             <br>
 
-            <div id="radial-container"></div>
+                <div id="radial-container"></div>
 
             <br>
             <br>
 
 
-            <table class="table table-hover" id="call-table">
+            <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%" id="call-table">
                 <thead>
                 <tr>
-                    <th scope="col">Type</th>
-                    <th scope="col">Call number</th>
-                    <th scope="col">Time</th>
+                    <th class="th-sm">Type</th>
+                    <th class="th-sm">Call Number</th>
+                    <th class="th-sm">Time</th>
                 </tr>
                 </thead>
                 <tbody>
                 </tbody>
+                <tfoot>
+                <tr>
+                    <th class="th-sm">Type</th>
+                    <th class="th-sm">Call Number</th>
+                    <th class="th-sm">Time</th>
+                </tr>
+                </tfoot>
             </table>
 
         </div>
 
+
     </body>
 
+    <!-- *** Scripts that need to be loaded after the page loads. ***-->
+
+
+    <!-- https://mdbootstrap.com/education/bootstrap/quick-start/ -->
+    <!--<script src="mdb/mdb.min.js"></script>
+    <script type="text/javascript" src="mdb/datatables.min.js"></script>-->
+    <script src="mdb/mdb.min.js"></script>
+    <script type="text/javascript" src="mdb/datatables.min.js"></script>
 </html>

@@ -76,6 +76,14 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function () {
+    $('#call-table').DataTable({
+        "scrollY": "270px",
+        "scrollCollapse": true,
+    });
+    $('.dataTables_length').addClass('bs-select');
+});
+
 $(function(){
     updateRadialContainer(0);
 });
