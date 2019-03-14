@@ -2,10 +2,10 @@ export default class RadialContainerService {
 
     constructor(numberOfCallGoal) {
         this.numberOfCallGoal=numberOfCallGoal;
-        this.updateRadialContainer(0);
+        this.drawRadialContainer(0);
     }
 
-    updateRadialContainer(numberOfCallsTakenParameter) {
+    drawRadialContainer(numberOfCallsTakenParameter) {
         const percentage = (numberOfCallsTakenParameter / this.numberOfCallGoal) * 100;
         console.log("percentage is :"+percentage);
 
@@ -13,7 +13,7 @@ export default class RadialContainerService {
         jQuery("#radial-container").radialProgress("init", {
             'size': 200,
             'fill': 10
-        }).radialProgress("to", {'perc': percentage, 'time': 500});
+        }).radialProgress("to", {'perc':percentage+0.1, 'time': 500});
     }
     
 }

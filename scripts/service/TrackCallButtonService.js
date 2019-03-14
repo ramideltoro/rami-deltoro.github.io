@@ -7,14 +7,13 @@ export default class TrackCallButtonService {
         this.numberOfCallsTaken=0;
         this.radialContainerService = new RadialContainerService(numberOfCallGoal);
         this.callTableService = new CallTableService();
-
     }
 
 
     handleButtonClick() {
         console.log("Action :: trackCallButton was clicked.")
         this.numberOfCallsTaken++;
-        this.radialContainerService.updateRadialContainer(this.numberOfCallsTaken);
+        this.radialContainerService.drawRadialContainer(this.numberOfCallsTaken);
         this.callTableService.addRowToCallTable();
     }
 }
