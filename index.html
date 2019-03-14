@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
         <title>Call Tracker</title>
 
         <!-- **** BOOTSTRAP & FULL JQUERY *** -->
@@ -15,7 +16,7 @@
 
         <!--The following is a script for the radial progress bar.
             https://www.jqueryscript.net/loading/Customizable-Radial-Progress-Bar-Plugin-With-jQuery.html-->
-        <script src="scripts/radialProgressBar.js"></script>
+        <script src="widgets/radialProgressBar.js"></script>
 
         <!-- IMPORTANT : To change the following minty-bootstrap.css from https://bootswatch.com/4/**[SELECT THEME]**/bootstrap.css-->
         <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css" media="screen">
@@ -24,7 +25,10 @@
 
 
         <!-- **** MAIN APP *** -->
-        <script src="scripts/callTracker.js"></script>
+        <script type=module src="scripts/handler/TrackCallEventHandler.js"></script>
+
+
+        <!-- **** Initializers *** -->
 
 
 
@@ -36,26 +40,29 @@
         <div class="jumbotron">
             <h1 class="display-3">Call Tracker</h1>
             <p class="lead">This software will help you track your calls</p>
+            <p>It can provide you vital information you need throughout the day</p>
 
-            <div class="row" style="">
-
-                <div class="col-xs-12 col-md-6" style="height:150px;">
+<!--                <div  style="height:150px;">
                     <hr class="my-4">
                     <p>It can provide you vital information you need throughout the day</p>
-                </div>
+                </div>-->
 
-                <div class="col-xs-12 col-md-6" style="height:150px;" >
-                    <hr class="my-4">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- **** Button to kick off process -->
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button" id="trackCallButton">Track call</a>
+                    </p>
+                </div>
+                <div class="col-md-6">
                     <p>Your progress percentage towards 50 calls today.</p>
-                    <div id="radial-container" align="center"></div>
+                    <div id="radial-container"></div>
                 </div>
             </div>
 
 
-            <!-- **** Button to kick off process -->
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button" id="trackCallButton">Track call</a>
-            </p>
+
 
             <br>
             <br>
