@@ -8,7 +8,7 @@ export default class CallTableService {
     }
 
     addRowToCallTable() {
-        console.log("Action :: Attempting to add row to call-table.")
+        console.log("Action :: Attempting to add row to call-table.");
 
         const currentTime = this.timeFormatterService.getCurrentTime();
         this.callNumber++;
