@@ -1,0 +1,17 @@
+body {
+    background-color: #f4f7fa;;
+}
+
+.row {
+    padding: 0 30px 10px 30px;
+}
+
+.card {
+    box-shadow: none;
+
+}
+.card-borderless {
+    border: 0;
+}
+
+
